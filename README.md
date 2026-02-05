@@ -15,7 +15,7 @@ This project was developed and maintained by:
 ## 📌 Project Info
 
 **Live Project URL:**  
-https://REPLACE_WITH_PROJECT_URL
+https://github.com/ahmedbou2000/UniPark-Smart-Parking-Demo
 
 ---
 
@@ -36,10 +36,10 @@ Steps:
 
 ```sh
 # Clone the repository
-git clone <YOUR_GIT_URL>
+git clone https://github.com/ahmedbou2000/UniPark-Smart-Parking-Demo
 
 # Go into the project folder
-cd <YOUR_PROJECT_NAME>
+cd UniPark-Smart-Parking-Demo
 
 # Install dependencies
 npm install
