@@ -1,6 +1,6 @@
 # 🚀 Project Overview
 
-This is a custom web application developed using **Lovable** as a starting platform and further customized by our team.
+This is a custom web application designed and developed by our team as part of an academic project.
 
 ## 👨‍💻 Development Team
 
@@ -15,23 +15,13 @@ This project was developed and maintained by:
 ## 📌 Project Info
 
 **Live Project URL:**  
-https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+https://REPLACE_WITH_PROJECT_URL
 
 ---
 
 ## ✏️ How can I edit this project?
 
 You can modify and extend this project in several ways:
-
-### 🔹 Using Lovable
-
-Visit the Lovable project page:
-
-https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID  
-
-Changes made through Lovable are automatically committed to the repository.
-
----
 
 ### 🔹 Using your own IDE (Local Development)
 
