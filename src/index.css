@@ -1,0 +1,223 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* UniPark Design System - Clean, Modern, Glassmorphism */
+
+@layer base {
+  :root {
+    /* Background & Surfaces */
+    --background: 210 20% 98%;
+    --foreground: 222 47% 11%;
+    
+    /* Card with glassmorphism */
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    
+    /* Primary - Blue pastel */
+    --primary: 210 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --primary-soft: 210 100% 96%;
+    
+    /* Secondary - Gray */
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 222 47% 11%;
+    
+    /* Muted */
+    --muted: 210 20% 96%;
+    --muted-foreground: 215 16% 47%;
+    
+    /* Accent - Teal/Green pastel */
+    --accent: 160 60% 45%;
+    --accent-foreground: 0 0% 100%;
+    --accent-soft: 160 60% 95%;
+    
+    /* Status Colors */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --success-soft: 142 76% 95%;
+    
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --warning-soft: 38 92% 95%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --destructive-soft: 0 84% 97%;
+    
+    /* Parking Status */
+    --slot-available: 142 76% 36%;
+    --slot-reserved: 38 92% 50%;
+    --slot-occupied: 0 84% 60%;
+    
+    /* Borders & Inputs */
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 210 100% 50%;
+    
+    --radius: 0.75rem;
+    
+    /* Sidebar */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 222 47% 11%;
+    --sidebar-primary: 210 100% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 20% 96%;
+    --sidebar-accent-foreground: 222 47% 11%;
+    --sidebar-border: 214 32% 91%;
+    --sidebar-ring: 210 100% 50%;
+    
+    /* Glassmorphism */
+    --glass-bg: 0 0% 100% / 0.7;
+    --glass-border: 0 0% 100% / 0.2;
+  }
+
+  .dark {
+    --background: 222 47% 6%;
+    --foreground: 210 40% 98%;
+    
+    --card: 222 47% 8%;
+    --card-foreground: 210 40% 98%;
+    
+    --popover: 222 47% 8%;
+    --popover-foreground: 210 40% 98%;
+    
+    --primary: 210 100% 60%;
+    --primary-foreground: 222 47% 6%;
+    --primary-soft: 210 100% 15%;
+    
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+    
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+    
+    --accent: 160 60% 50%;
+    --accent-foreground: 222 47% 6%;
+    --accent-soft: 160 60% 12%;
+    
+    --success: 142 76% 45%;
+    --success-foreground: 222 47% 6%;
+    --success-soft: 142 76% 12%;
+    
+    --warning: 38 92% 55%;
+    --warning-foreground: 222 47% 6%;
+    --warning-soft: 38 92% 12%;
+    
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 210 40% 98%;
+    --destructive-soft: 0 62% 12%;
+    
+    --slot-available: 142 76% 45%;
+    --slot-reserved: 38 92% 55%;
+    --slot-occupied: 0 62% 50%;
+    
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 210 100% 60%;
+    
+    --sidebar-background: 222 47% 8%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 210 100% 60%;
+    --sidebar-primary-foreground: 222 47% 6%;
+    --sidebar-accent: 217 33% 17%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217 33% 17%;
+    --sidebar-ring: 210 100% 60%;
+    
+    --glass-bg: 222 47% 8% / 0.7;
+    --glass-border: 0 0% 100% / 0.1;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  /* Glassmorphism Card */
+  .glass-card {
+    @apply bg-card/70 backdrop-blur-xl border border-white/20 shadow-xl;
+  }
+  
+  /* Gradient backgrounds */
+  .gradient-primary {
+    @apply bg-gradient-to-br from-primary to-accent;
+  }
+  
+  .gradient-soft {
+    @apply bg-gradient-to-br from-primary-soft to-accent-soft;
+  }
+  
+  /* Parking slot colors */
+  .slot-available {
+    @apply bg-success text-success-foreground;
+  }
+  
+  .slot-reserved {
+    @apply bg-warning text-warning-foreground;
+  }
+  
+  .slot-occupied {
+    @apply bg-destructive text-destructive-foreground;
+  }
+  
+  /* Hover scale effect */
+  .hover-scale {
+    @apply transition-transform duration-200 hover:scale-105;
+  }
+  
+  /* Fade slide animation */
+  .animate-fade-slide {
+    animation: fadeSlide 0.5s ease-out forwards;
+  }
+  
+  @keyframes fadeSlide {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Pulse glow effect */
+  .pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite;
+  }
+  
+  @keyframes pulseGlow {
+    0%, 100% {
+      box-shadow: 0 0 5px hsl(var(--primary) / 0.5);
+    }
+    50% {
+      box-shadow: 0 0 20px hsl(var(--primary) / 0.8);
+    }
+  }
+}
+
+/* Leaflet map styles */
+.leaflet-container {
+  @apply rounded-2xl;
+  font-family: inherit;
+}
+
+.leaflet-popup-content-wrapper {
+  @apply rounded-xl shadow-lg;
+}
+
+.leaflet-popup-content {
+  margin: 12px 16px;
+}
